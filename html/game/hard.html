@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link rel="stylesheet" href="../../style/game.css" />
+    <script src="../../script/game.js"></script>
+    <title>Memory</title>
+  </head>
+  <!-- call function play with argument boardSize = 36, meaning a board with 36 tiles -->
+  <body onload="play(36)">
+    <header>
+      <a href="../../index.html"><h1>Memory</h1></a>
+      <!-- number of seconds, 2 minutes -->
+      <div id="timer">120</div>
+      <h1 id="project-two-header">Project Two</h1>
+    </header>
+
+    <section>
+      <div id="board" class="board-hard"></div>
+      <div id="win-screen">
+        <div>
+          <h2>You win!</h2>
+          <p>20 seconds left,</p>
+          <p>7 turns</p>
+          <p>and 2 pairs found.</p>
+        </div>
+        <div id="menu">
+          <a href="hard.html">PLAY AGAIN?</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

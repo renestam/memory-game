@@ -1,0 +1,148 @@
+#timer {
+    background-color: rgb(0, 41, 63);
+    padding-block: 7px;
+    padding-inline: 10px;
+    border-radius: 15px;
+    font-size: x-large;
+}
+
+#board {
+    display: grid;
+    gap: 10px;
+    width: calc(100vw - 30px);
+    height: calc(100vw - 30px);
+    margin: 15px;
+}
+
+/* board sizes */
+.board-easy {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.empty-tile {
+    /* background-color: rgb(0, 55, 84); */
+    grid-area: 2 / 2 / 3 / 3;
+}
+.board-medium {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.board-hard {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+#board div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#board img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* different tile colors */
+.blue {
+    background-color: rgb(0, 119, 255);
+}
+.green {
+    background-color: rgb(11, 187, 26);
+}
+.orange {
+    background-color: rgb(160, 109, 0);
+}
+.purple {
+    background-color: rgb(78, 0, 129);
+}
+
+.blue, .green, .orange, .purple {
+    cursor: pointer;
+}
+
+/* win screen */
+#win-screen{
+    display: none;
+    flex-direction: row;
+    background-color: rgb(0, 55, 84);
+    width: calc(100vw - 30px);
+    margin-inline: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+#win-screen div {
+    width: 50%;
+    margin-right: 10px;
+}
+#win-screen h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#menu {
+    background-color: rgb(0, 45, 69);
+    border-radius: 7px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 0px !important;
+}
+#menu a {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    height: 100%;
+}
+
+/* tablet layout */
+@media only screen and (min-width: 600px) {
+    #board {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+/* desktop layout */
+@media only screen and (min-width: 769px) {
+    section {
+        flex-direction: row;
+        min-height: calc(100vh - 75px);
+    }
+
+    #board {
+        width: calc(100vh - 130px);
+        height: calc(100vh - 130px);;
+    }
+
+    #win-screen {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: calc(100vh - 130px);;
+        margin: 20px;
+        margin-left: 0px;
+        padding: 20px;
+    }
+    #win-screen div {
+        width: 100%;
+    }
+    #menu {
+        margin: 0px;
+        margin-top: 30px;
+        height: 120px;
+    }
+}
+
+/* make sure images don't get squashed at smaller widths */
+@media only screen and (min-width: 769px) and (max-width: 1220px) {
+    #board {
+        width: calc(85vw) !important;
+        height: calc(85vw) !important;
+    }
+    #win-screen {
+        width: 15vw;
+        height: calc(85vw) !important;
+    }
+}

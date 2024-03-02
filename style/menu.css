@@ -1,0 +1,50 @@
+#easy, #medium, #hard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    border-radius: 25px;  
+}
+
+#easy {
+    background-color: rgb(6, 135, 17);
+}
+#medium {
+    background-color: rgb(160, 109, 0);
+}
+#hard {
+    background-color: rgb(78, 0, 129);
+}
+
+#tutorial-button {
+    background-color: rgb(0, 55, 84);
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    align-self: flex-end;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-block: 15px;
+    padding-inline: 15px;
+}
+
+section {
+    min-height: calc(100dvh - 75px);
+}
+
+/* larger layout */
+@media only screen and (min-width: 600px) {
+    #content {
+        width: 450px;
+    }
+}

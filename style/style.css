@@ -1,0 +1,54 @@
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 20px;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(0, 41, 63);
+    min-height: 100dvh;
+}
+
+header {
+    background-color: rgb(0, 55, 84);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-block: 13px;
+    padding-inline: 15px;
+}
+header h1 {
+    padding-right: 15px;
+}
+#project-two-header {
+    font-size: 25px;
+    padding-right: 0px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
