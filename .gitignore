@@ -1,0 +1,20 @@
+# Ignore Git files
+.git/
+
+# Ignore node_modules
+node_modules/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore build output folders
+dist/
+build/
+
+# Ignore log files
+*.log
+
+# Ignore other unnecessary files (you can add more here if needed)
+*.bak
+*.tmp

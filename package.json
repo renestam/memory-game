@@ -1,0 +1,24 @@
+{
+  "name": "memory-game",
+  "version": "1.0.0",
+  "description": "This is a website where you can play Memory!",
+  "main": "index.js",
+  "scripts": {
+    "clean": "if exist dist (rmdir /s /q dist) else mkdir dist",
+    "copy:html": "copyfiles index.html html/**/*.html dist/",
+    "copy:styles": "copyfiles -u 1 style/* dist/style/",
+    "copy:assets": "copyfiles -u 1 assets/images/**/* dist/assets/",
+    "copy:scripts": "copyfiles -u 1 script/* dist/script/",
+    "build": "npm-run-all --silent clean copy:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "glob": "^11.0.2"
+  }
+}
